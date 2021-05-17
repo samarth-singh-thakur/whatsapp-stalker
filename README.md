@@ -1,2 +1,2 @@
 # whatsapp-stalker
-This is a fun project with which will keeps logs of "last seen" .
+This is a fun script which will keeps logs of whatsapp "last seen" .
