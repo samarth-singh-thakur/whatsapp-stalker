@@ -8,7 +8,11 @@ stalker.get("https://web.whatsapp.com")
 sessionStart = None; 
 checked = False;
 sessions = [];
-
+msg = '''------------------------------------------------------------------------------------
+		|Welcome to whatsapp-stalker, run the script, open the friend's chat in WhatsApp-Web |
+		|and let the script takeover. You can even minimize the browser    					 |
+		-------------------------------------------------------------------------------------'''
+print(msg)
 while True:
 	try:
 		name = stalker.find_element_by_xpath('//*[@id="main"]/header/div[2]/div/div/span').text
@@ -25,11 +29,11 @@ while True:
 				# print(sessioStart, str(duration), sessionEnd)
 				sessions.append([sessioStart, str(duration), sessionEnd])
 				if(checked == True):			
-					print("{}. {} opened whatsapp at {}, stayed for {} seconds and went offline on {}".format(len(sessions),name,sessions[-1][0],sessions[-1][1],sessions[-1][2]))
+					print("{}. {} opened whatsapp at {}, stayed for {} seconds and went offline at {}".format(len(sessions),name,sessions[-1][0],sessions[-1][1],sessions[-1][2]))
 					checked = False;
 				sessionStart = None
 	except Exception as e:
-		print(e,end = "\r")
+		# print(e,end = "\r")
 		pass
 
 		
